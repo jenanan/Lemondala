@@ -1,0 +1,173 @@
+/* ==========================
+   Global Settings
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #050505;
+    color: #f2f2f2;
+    font-family: "Courier New", monospace;
+}
+
+
+/* ==========================
+   Nav Bar
+========================== */
+
+.transform-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+.transform-nav a {
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color .2s ease;
+}
+
+.transform-nav a:hover {
+    color: white;
+}
+
+
+/* ==========================
+   Overall Layout
+========================== */
+
+.game {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+
+/* ==========================
+   Tree Area
+========================== */
+
+.tree-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    min-height: 0;
+    padding-bottom: 1.5rem;
+
+    border: 1px dashed #333;
+}
+
+.tree {
+    text-align: center;
+    line-height: 1.2;
+    white-space: pre;
+
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+/* ==========================
+   Cards
+========================== */
+
+.card-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(1rem, 3vw, 2rem);
+
+    padding-top: 2rem;
+}
+
+.deck,
+.card {
+    width: clamp(40px, 9vw, 60px);
+    height: clamp(60px, 14vw, 90px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #f2f2f2;
+
+    letter-spacing: .1em;
+
+    user-select: none;
+}
+
+.deck {
+    opacity: .75;
+}
+
+.cards {
+    display: flex;
+    gap: clamp(.75rem, 2vw, 1.5rem);
+}
+
+.card:hover {
+    cursor: pointer;
+    background: #f2f2f2;
+    color: #050505;
+}
+
+
+/* ==========================
+   Mobile Layout
+========================== */
+
+@media (max-width: 600px) {
+
+    .card-area {
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .deck,
+    .card {
+        width: 30vw;
+        height: 42vw;
+    }
+
+}
+
+
+/* ==========================
+   Cultivation in Progress Message
+========================== */
+
+.transform-page {
+    min-height: calc(100vh - 180px);
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+.cultivation-message {
+    text-align: center;
+}
+
+.cultivation-message h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.cultivation-message p {
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}

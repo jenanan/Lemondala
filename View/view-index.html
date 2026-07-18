@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View | Lemondala</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="view-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<!-- Site Header -->
+<header class="site-header">
+
+    <div class="brand">
+
+        <a href="../index.html" class="logo">
+            LEMONDALA
+        </a>
+
+    <nav class="site-nav">
+        <a href="../view/view-index.html" class="active">VIEW</a>
+        <a href="../transform/index.html" class="active">TRANSFORM</a>
+        <a href="../spread/spread-index.html" class="active">SPREAD</a>
+    </nav>
+
+    </div>
+
+</header>
+
+<body>
+    <main class="view-page">
+        <section class="image-gallery" aria-label="Lemondala visual works">
+            <button class="artwork-trigger" type="button" data-gif="GIFs/1.gif" aria-label="Play animation of the knife lemon">
+            <img src="../assets/images/1.png" alt="Conceptual collage of a lemon pierced by a sword with a human leg extending behind it."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/2.gif" aria-label="Play animation of the lemon shark">
+            <img src="../assets/images/2.png" alt="Conceptual collage of a lemon combined with a shark head, torn fish tail, and human arms."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/4.gif" aria-label="Play animation of dance battle lemons">
+            <img src="../assets/images/4.png" alt="Lemon dance battle. Conceptual collate of two lemons with with human legs, one wearing a conical hat and the other wearing a Viking helmet."></button>
+            
+            <button class="artwork-trigger" type="button" data-gif="GIFs/6.gif" aria-label="Play animation of the lemon with the pink bra">
+            <img src="../assets/images/6.png" alt="Lemon wearing a pink bra against a white background."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/9.gif" aria-label="Play animation of lemon spraying">
+            <img src="../assets/images/9.png" alt="Two lemons. The right lemon sprays a golden liquid stream at the other."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/10.gif" aria-label="Play animation of the grater explosion">
+            <img src="../assets/images/10.png" alt="A lemon faces a tilted box grater balanced on a lit red explosive."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/5.gif" aria-label="Play animation of the pink lemon sunflower">
+            <img src="../assets/images/5.png" alt="A sunflower with a lemon center and pink petals."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/12.gif" aria-label="Play animation of the lemon with hat and dog legs">
+            <img src="../assets/images/12.png" alt="A lemon with a hat and dog legs."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/13.gif" aria-label="Play animation of the lemon eating small lemons from pill bottle">
+            <img src="../assets/images/13.png" alt="A lemon stands next to a pill bottle full of mini lemons."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/14.gif" aria-label="Play animation of the lemon with antlers eating ice cream">
+            <img src="../assets/images/14.png" alt="A lemon with turquoise antlers eats an ice cream cone."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/15.gif" aria-label="Play animation of the lemon spraying the eyeball">
+            <img src="../assets/images/15.png" alt="A lemon on the right and an eyeball on the left. The lemon sprays juice on the eyeball."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/16.gif" aria-label="Play animation of the lemon sucking the cactus gone">
+            <img src="../assets/images/16.png" alt="A lemon on the right and an cactus with a yellow flower on the left. A blue straw sticks out from the cactus."></button>
+            
+            <button class="artwork-trigger" type="button" data-gif="GIFs/17.gif" aria-label="Play animation of the lemon spraying on the candle">
+            <img src="../assets/images/17.png" alt="A lemon on a blue cupcake with a candle and a lemon on a red cupcake spraying juice onto the candle."></button>
+
+            <button class="artwork-trigger" type="button" data-gif="GIFs/18.gif" aria-label="Play animation of the lemon and salt shaker in the boat">
+            <img src="../assets/images/18.png" alt="A lemon with a black eyepatch. A salt shaker with chain around it attached to boat wheel. They are on a boat on water."></button>
+            
+            <button class="artwork-trigger" type="button" data-gif="GIFs/19.gif" aria-label="Play animation of the lemon and salt shaker in the boat">
+            <img src="../assets/images/19.png" alt="A lemon throws a flame at an ice cube."></button>
+        </section>
+    </main>
+
+<div
+    class="gif-modal"
+    id="gif-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Animated artwork"
+    hidden
+>
+    <button
+        class="modal-close"
+        id="modal-close"
+        type="button"
+        aria-label="Close animation"
+    >
+        ×
+    </button>
+
+    <img id="modal-gif" draggable="false" src="" alt="">
+</div>
+
+<script src="view.js"></script>
+
+<footer class="site-footer">
+
+    <a href="https://www.facebook.com/lemondala"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit Lemondala on Facebook">
+
+        <i class="fa-brands fa-facebook"></i>
+
+    </a>
+
+    <p>© 2026 Lemondala</p>
+
+</footer>
+
+</body>
+</html>
