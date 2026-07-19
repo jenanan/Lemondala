@@ -96,6 +96,12 @@
     --tilt: -1deg;
 }
 
+.piece-semi-wide {
+    grid-column: span 5;
+    grid-row: span 7;
+    --tilt: -1deg;
+}
+
 .piece-hat-wide {
     grid-column: span 5;
     grid-row: span 10;
