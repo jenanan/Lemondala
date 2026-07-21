@@ -103,8 +103,8 @@
 }
 
 .piece-semi-wider {
-    grid-column: span 4;
-    grid-row: span 7;
+    grid-column: span 5;
+    grid-row: span 8;
     --tilt: -1deg;
 }
 
