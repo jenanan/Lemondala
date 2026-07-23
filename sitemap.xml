@@ -8,19 +8,19 @@
   </url>
 
   <url>
-    <loc>https://lemondala.com/View/view-index.html</loc>
+    <loc>https://lemondala.com/View/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://lemondala.com/Transform/index.html</loc>
+    <loc>https://lemondala.com/Transform/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://lemondala.com/Spread/spread-index.html</loc>
+    <loc>https://lemondala.com/Spread/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
