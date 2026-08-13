@@ -145,7 +145,7 @@
     margin: 3rem auto;
 
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 375px 1fr;
     gap: 3rem;
     align-items: center;
 }
@@ -157,7 +157,7 @@
 .skit-image img {
     display: block;
     width: 100%;
-    max-width: 500px;
+    max-width: 375px;
     height: auto;
 }
 
