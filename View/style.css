@@ -141,10 +141,11 @@
 }
 
 .skit-link {
-    width: min(1100px, 90%);
+    width: min(1000px, 90%);
     margin: 3rem auto;
+
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 500px 1fr;
     gap: 3rem;
     align-items: center;
 }
@@ -156,11 +157,12 @@
 .skit-image img {
     display: block;
     width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
 .skit-teaser {
-    font-family: Arial, sans-serif;
+    min-width: 0;
 }
 
 .skit-teaser h2 {
