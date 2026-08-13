@@ -149,12 +149,12 @@
 
 .skit-link a {
     display: block;
-    width: min(800px, 90%);
+    width: min(500px, 90%);
 }
 
 .skit-link img {
     display: block;
-    width: 100%;
+    width: 70%;
     height: auto;
     object-fit: contain;
 }
