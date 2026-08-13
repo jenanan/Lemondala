@@ -140,6 +140,25 @@
     cursor: pointer;
 }
 
+.skit-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.skit-link a {
+    display: block;
+    width: min(800px, 90%);
+}
+
+.skit-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* Footer */
 
 .site-footer {
