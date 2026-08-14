@@ -335,18 +335,15 @@ cardElements.forEach(function (card) {
     const selectedCard = card.dataset.card;
 
     // Dynamite Lemon will get special reset behavior next.
-    if (selectedCard === "DynamiteLemon") {
-      currentStep = 1;
-      updateTree();
+if (selectedCard === "DynamiteLemon") {
+  currentStep = 1;
+  updateTree();
 
-      card.textContent = selectedCard;
-    } else {
-      const movement = getRandomMovement(selectedCard);
+} else {
+  const movement = getRandomMovement(selectedCard);
 
-      moveTree(movement);
-
-      card.textContent = selectedCard;
-    }
+  moveTree(movement);
+}
 
     // Let the result sit briefly.
     window.setTimeout(function () {
