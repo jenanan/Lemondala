@@ -216,28 +216,28 @@ body {
 @media (max-width: 800px) {
 
     .card-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     .deck {
-    width: 90px;
-    flex-shrink: 0;
+        width: 90px;
+        flex-shrink: 0;
     }
 
     .drawn-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0;
     }
 
     .card {
-    width: 90px;
-    flex-shrink: 0;
+        width: 90px;
+        flex-shrink: 0;
     }
 
     .game {
@@ -246,10 +246,6 @@ body {
 
     .game-layout {
         grid-template-columns: 1fr;
-    }
-
-    .drawn-cards {
-        margin-bottom: 1rem;
     }
 
     .tree-panel {
@@ -261,10 +257,11 @@ body {
     }
 
     .tree-step {
-    width: 180%;
-    max-width: none;
-    max-height: none;
-    height: auto;
-    flex-shrink: 0;
+        width: 180%;
+        max-width: none;
+        max-height: none;
+        height: auto;
+        flex-shrink: 0;
+        transform: translateX(35px);
     }
 }
