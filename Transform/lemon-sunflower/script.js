@@ -5,28 +5,15 @@
 let currentStep = 1;
 const minStep = 1;
 
-// Change this to the number of sunflower state images you created.
+// Number of sunflower state images.
 const maxStep = 23;
 
 let transformComplete = false;
 
 
-
 // ==========================
 // DIE MOVEMENT
 // ==========================
-
-// Starting movement rules.
-//
-// 1 = backward 2
-// 2 = backward 1
-// 3 = backward 1
-// 4 = forward 1
-// 5 = forward 1
-// 6 = forward 2
-//
-// We can change these later without changing
-// the rest of the Transform architecture.
 
 const dieMovement = {
   1: [-2, -1, 1],
@@ -97,8 +84,8 @@ function rollDie() {
 function animateDie(finalRoll) {
 
   // Random dramatic full rotations.
-  // Because these are multiples of 360,
-  // the die can tumble wildly and still land face-up.
+  // Multiples of 360 let the die tumble
+  // while still landing squarely on a face.
   const xTurns =
     (3 + Math.floor(Math.random() * 4)) * 360;
 
@@ -199,21 +186,42 @@ function endTransform() {
 
   sunflowerElement.innerHTML = "";
 
-  const completeVideo = document.createElement("video");
+  const completeVideo =
+    document.createElement("video");
 
   completeVideo.src =
     "images/lemon_sunflower_complete.mp4";
 
   completeVideo.autoplay = true;
+  completeVideo.muted = true;
   completeVideo.playsInline = true;
 
-  completeVideo.classList.add("sunflower-complete-video");
+  completeVideo.classList.add(
+    "sunflower-complete-video"
+  );
 
-  sunflowerElement.appendChild(completeVideo);
+  // Set up the completion message
+  // before starting playback.
+  completeVideo.addEventListener(
+    "ended",
+    function () {
+      endModal.classList.add("show");
+    }
+  );
 
-  completeVideo.addEventListener("ended", function () {
-    endModal.classList.add("show");
-  });
+  sunflowerElement.appendChild(
+    completeVideo
+  );
+
+  // Explicitly start playback.
+  completeVideo.play().catch(
+    function (error) {
+      console.error(
+        "Completion video could not play:",
+        error
+      );
+    }
+  );
 }
 
 
@@ -221,46 +229,54 @@ function endTransform() {
 // DIE SELECTION
 // ==========================
 
-dieButton.addEventListener("click", function () {
+dieButton.addEventListener(
+  "click",
+  function () {
 
-  if (rollInProgress || transformComplete) {
-    return;
+    if (
+      rollInProgress ||
+      transformComplete
+    ) {
+      return;
+    }
+
+    rollInProgress = true;
+    dieButton.disabled = true;
+
+    const finalRoll =
+      rollDie();
+
+    animateDie(finalRoll);
   }
-
-  rollInProgress = true;
-  dieButton.disabled = true;
-
-  const finalRoll =
-    rollDie();
-
-  animateDie(finalRoll);
-});
+);
 
 
 // ==========================
 // RESET
 // ==========================
 
-resetTransform.addEventListener("click", function () {
+resetTransform.addEventListener(
+  "click",
+  function () {
 
-  currentStep = 1;
-  transformComplete = false;
-  rollInProgress = false;
+    currentStep = 1;
+    transformComplete = false;
+    rollInProgress = false;
 
-  endModal.classList.remove("show");
+    endModal.classList.remove("show");
 
-  dieCube.style.transform =
-  "rotateX(0deg) rotateY(0deg)";
+    dieCube.style.transform =
+      "rotateX(0deg) rotateY(0deg)";
 
-  dieButton.disabled = false;
+    dieButton.disabled = false;
 
-  updateSunflower();
-});
+    updateSunflower();
+  }
+);
 
 
 // ==========================
 // START TRANSFORM
 // ==========================
-
 
 updateSunflower();
