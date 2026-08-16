@@ -227,15 +227,15 @@ body {
     }
 
     .tree-panel {
-        min-height: 420px;
+        min-height: 600px;
     }
 
     .tree {
-        min-height: 420px;
+        min-height: 600px;
     }
 
     .tree-step {
         width: 90%;
-        max-height: 420px;
+        max-height: 600px;
     }
 }
