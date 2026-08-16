@@ -252,6 +252,7 @@ body {
 /* Mobile */
 
 @media (max-width: 800px) {
+
     .transform {
         padding: 1rem;
     }
@@ -277,7 +278,10 @@ body {
     }
 
     .sunflower-step {
-        width: 55%;
-        max-height: 280px;
+        width: 180%;
+        max-width: none;
+        max-height: none;
+        height: auto;
+        flex-shrink: 0;
     }
 }
