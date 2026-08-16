@@ -227,17 +227,18 @@ body {
     }
 
     .tree-panel {
-        min-height: 280px;
+        min-height: 300px;
     }
 
     .tree {
-        min-height: 280px;
+        min-height: 300px;
     }
 
     .tree-step {
-    width: 100%;
-    max-width: 100%;
+    width: 140%;
+    max-width: none;
     max-height: none;
     height: auto;
+    flex-shrink: 0;
     }
 }
