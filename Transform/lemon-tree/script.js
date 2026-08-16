@@ -339,13 +339,11 @@ cardElements.forEach(function (card) {
       currentStep = 1;
       updateTree();
 
-      card.textContent = selectedCard;
     } else {
       const movement = getRandomMovement(selectedCard);
 
       moveTree(movement);
 
-      card.textContent = selectedCard;
     }
 
     // Let the result sit briefly.
