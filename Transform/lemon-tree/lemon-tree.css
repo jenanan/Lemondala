@@ -214,6 +214,32 @@ body {
 
 
 @media (max-width: 800px) {
+
+    .card-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    }
+
+    .deck {
+    width: 105px;
+    flex-shrink: 0;
+    }
+
+    .drawn-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0;
+    }
+
+    .card {
+    width: 84px;
+    flex-shrink: 0;
+    }
+
     .game {
         padding: 1rem;
     }
@@ -235,7 +261,7 @@ body {
     }
 
     .tree-step {
-    width: 200%;
+    width: 180%;
     max-width: none;
     max-height: none;
     height: auto;
