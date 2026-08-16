@@ -256,8 +256,38 @@ body {
         margin-bottom: 1rem;
     }
 
-    .die {
-        width: 100px;
+    .die-scene {
+        width: 182px;
+        height: 182px;
+    }
+
+    .die-face {
+        width: 182px;
+        height: 182px;
+    }
+
+    .die-face-1 {
+        transform: rotateY(0deg) translateZ(91px);
+    }
+
+    .die-face-2 {
+        transform: rotateY(90deg) translateZ(91px);
+    }
+
+    .die-face-3 {
+        transform: rotateY(180deg) translateZ(91px);
+    }
+
+    .die-face-4 {
+        transform: rotateY(-90deg) translateZ(91px);
+    }
+
+    .die-face-5 {
+        transform: rotateX(90deg) translateZ(91px);
+    }
+
+    .die-face-6 {
+        transform: rotateX(-90deg) translateZ(91px);
     }
 
     .sunflower-panel {
