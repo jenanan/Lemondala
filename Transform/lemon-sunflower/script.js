@@ -190,7 +190,7 @@ function endTransform() {
     document.createElement("video");
 
   completeVideo.src =
-    "Images/lemon_sunflower_complete.mp4";
+    "lemon_sunflower_complete.mp4";
 
   completeVideo.autoplay = true;
   completeVideo.muted = true;
