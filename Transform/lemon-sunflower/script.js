@@ -274,6 +274,7 @@ resetTransform.addEventListener(
     currentStep = 1;
     transformComplete = false;
     rollInProgress = false;
+    rollCount = 0;
 
     endModal.classList.remove("show");
 
