@@ -202,7 +202,7 @@ function endTransform() {
   const completeVideo = document.createElement("video");
 
   completeVideo.src =
-    "images/lemon_sunflower_complete.mp4";
+    "images/Lemon_Sunflower_Complete.mp4";
 
   completeVideo.autoplay = true;
   completeVideo.playsInline = true;
