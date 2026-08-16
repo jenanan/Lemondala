@@ -291,10 +291,10 @@ body {
     }
 
     .sunflower-panel {
-    height: 240px;
+    height: 300px;
     min-height: 0;
     padding: 1rem;
-}
+    }
 
     .sunflower {
     height: 100%;
