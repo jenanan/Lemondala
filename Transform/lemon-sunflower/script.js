@@ -9,6 +9,7 @@ const minStep = 1;
 const maxStep = 23;
 
 let transformComplete = false;
+let rollCount = 0;
 
 
 // ==========================
@@ -16,11 +17,11 @@ let transformComplete = false;
 // ==========================
 
 const dieMovement = {
-  1: [3],
-  2: [3],
-  3: [3],
-  4: [2],
-  5: [2],
+  1: [-1, 1, 3],
+  2: [-3, 1, 2, 3],
+  3: [-2, -1, 1, 2, 3],
+  4: [-3, -2, -1, 1],
+  5: [-1, 1, 2],
   6: [-2, -1, 1, 2]
 };
 
@@ -137,11 +138,22 @@ function animateDie(finalRoll) {
 function applyRoll(roll) {
   const possibleMoves = dieMovement[roll];
 
+  let availableMoves = possibleMoves;
+
+  // The first two rolls always move forward.
+  if (rollCount < 2) {
+    availableMoves = possibleMoves.filter(function (move) {
+      return move > 0;
+    });
+  }
+
   const randomIndex =
-    Math.floor(Math.random() * possibleMoves.length);
+    Math.floor(Math.random() * availableMoves.length);
 
   const movement =
-    possibleMoves[randomIndex];
+    availableMoves[randomIndex];
+
+  rollCount += 1;
 
   moveSunflower(movement);
 }
