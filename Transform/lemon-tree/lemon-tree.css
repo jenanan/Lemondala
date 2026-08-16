@@ -227,11 +227,11 @@ body {
     }
 
     .tree-panel {
-        min-height: 750px;
+        min-height: 420px;
     }
 
     .tree {
-        min-height: 750px;
+        min-height: 420px;
     }
 
     .tree-step {
