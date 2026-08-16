@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemondala</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="transform.css">
+    <title>Transform | Lemondala</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="transform-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    
-    <nav class="transform-nav">
-        <a href="../View/">← VIEW</a>
-        <a href="../Spread/">SPREAD →</a>
-    </nav>
 
-    <main class="game">
+    <!-- Site Header -->
+    <header class="site-header">
 
-        <section class="tree-area">
+        <div class="brand">
 
-            <div class="game-layout">
-    <section class="card-area">
-        <div class="deck"></div>
+            <a href="../index.html" class="logo">
+                LEMONDALA
+            </a>
 
-        <div class="drawn-cards">
-            <button class="card"></button>
-            <button class="card"></button>
+            <nav class="site-nav">
+                <a href="../View/">VIEW</a>
+                <a href="../Transform/" class="active">TRANSFORM</a>
+                <a href="../Spread/">SPREAD</a>
+            </nav>
+
         </div>
-    </section>
 
-    <section class="tree-panel">
-        <div class="tree"></div>
-    </section>
-</div>
+    </header>
+
+
+    <main class="transform-main">
+
+        <!-- Transform Header -->
+        <header class="transform-intro">
+            <p>Transformation can move in either direction.</p>
+            <p>What helps once may hurt the next time.</p>
+        </header>
+
+
+        <!-- Transform Choices -->
+        <section class="transform-options">
+
+            <!-- Lemon Tree -->
+            <div class="transform-option">
+
+                <img
+                    src="lemon-tree/images/lemon-tree-final.png"
+                    alt="Lemon tree"
+                    class="transform-image"
+                >
+
+                <a
+                    href="lemon-tree/index.html"
+                    class="transform-button"
+                >
+                    THRIVE
+                </a>
+
+            </div>
+
+
+            <!-- Lemon Sunflower -->
+            <div class="transform-option">
+
+                <img
+                    src="lemon-sunflower/images/lemon-sunflower-final.png"
+                    alt="Lemon sunflower"
+                    class="transform-image"
+                >
+
+                <a
+                    href="lemon-sunflower/index.html"
+                    class="transform-button"
+                >
+                    BLOOM
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
-    <div class="end-modal" id="endModal">
-    <div class="end-modal-content">
-        <p>TRANSFORM complete.</p>
-        <p>Rest and reset.</p>
-        <p>The cycle continues.</p>
+<footer class="site-footer">
 
-        <button id="resetGame">RESET</button>
-    </div>
-</div>
+    <a href="https://www.facebook.com/lemondala"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit Lemondala on Facebook">
 
-    <script src="script.js"></script>
+        <i class="fa-brands fa-facebook"></i>
+
+    </a>
+
+    <p>© 2026 Lemondala</p>
+
+</footer>
 
 </body>
 </html>

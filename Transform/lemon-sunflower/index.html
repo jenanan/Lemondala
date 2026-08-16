@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lemondala</title>
+
+    <link rel="stylesheet" href="transform.css">
+</head>
+
+<body>
+
+    <nav class="transform-nav">
+        <a href="../../View/view-index.html">← VIEW</a>
+        <a href="../../Spread/spread-index.html">SPREAD →</a>
+    </nav>
+
+    <main class="transform">
+
+        <div class="transform-layout">
+
+            <!-- LEFT: DIE -->
+            <section class="die-area">
+
+                <div class="die-scene">
+
+                    <div class="die-cube" id="dieCube">
+
+                        <div class="die-face die-face-1">
+                            <img src="die_images/die-1.png" alt="">
+                        </div>
+
+                        <div class="die-face die-face-2">
+                            <img src="die_images/die-2.png" alt="">
+                        </div>
+
+                        <div class="die-face die-face-3">
+                            <img src="die_images/die-3.png" alt="">
+                        </div>
+
+                        <div class="die-face die-face-4">
+                            <img src="die_images/die-4.png" alt="">
+                        </div>
+
+                        <div class="die-face die-face-5">
+                            <img src="die_images/die-5.png" alt="">
+                        </div>
+
+                        <div class="die-face die-face-6">
+                            <img src="die_images/die-6.png" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button
+                    id="dieButton"
+                    class="roll-button"
+                    type="button"
+                >
+                    ROLL
+                </button>
+
+            </section>
+
+
+            <!-- RIGHT: SUNFLOWER -->
+            <section class="sunflower-panel">
+                <div class="sunflower"></div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <div class="end-modal" id="endModal">
+
+        <div class="end-modal-content">
+
+            <p>TRANSFORM complete.</p>
+            <p>Rest and reset.</p>
+            <p>The cycle continues.</p>
+
+            <button id="resetTransform">RESET</button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

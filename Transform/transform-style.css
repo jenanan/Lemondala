@@ -1,0 +1,224 @@
+.view-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+@media (max-width: 600px) {
+    .site-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+    }
+}
+
+/* ==========================
+   Header
+========================== */
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.brand {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.logo {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+}
+
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.site-nav a:visited {
+    color: white;
+}
+
+.site-nav a:hover {
+    opacity: 0.7;
+}
+
+.site-nav a.active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+
+/* ==========================
+   TRANSFORM PAGE
+   ========================== */
+
+.transform-main {
+    width: 100%;
+    padding: 2rem 2rem 4rem;
+}
+
+
+/* ==========================
+   INTRO
+   ========================== */
+
+.transform-intro {
+    margin: 0 auto 3rem;
+    text-align: center;
+
+    color: white;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.transform-intro p {
+    margin: 0.25rem 0;
+}
+
+
+/* ==========================
+   TRANSFORM OPTIONS
+   ========================== */
+
+.transform-options {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    align-items: start;
+}
+
+
+/* Individual Transform */
+
+.transform-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================
+   IMAGES
+   ========================== */
+
+.transform-image {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ==========================
+   BUTTONS
+   ========================== */
+
+.transform-button {
+    margin-top: 0.5rem;
+    padding: 0.8rem 2.25rem;
+
+    border: 3px solid white;
+    border-radius: 10px;
+
+    background: #84a92a;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.transform-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+
+/* ==========================
+   MOBILE
+   ========================== */
+
+@media (max-width: 800px) {
+
+    .transform-main {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .transform-intro {
+        margin-bottom: 2.5rem;
+        font-size: 1.15rem;
+    }
+
+    .transform-options {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .transform-image {
+        max-width: 350px;
+        height: 300px;
+    }
+}
+
+/* Footer */
+
+.site-footer {
+    margin-top: 5rem;
+    padding: 2.5rem 1rem;
+
+    background-color: #84A92A;   /* darker than your page */
+    border-top: 2px solid rgba(255,255,255,.35);
+
+    text-align: center;
+}
+
+.site-footer a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.site-footer a:hover {
+    opacity: .75;
+    transform: scale(1.1);
+}
+
+.site-footer p {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: .9rem;
+    letter-spacing: .05em;
+}

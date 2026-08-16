@@ -228,7 +228,7 @@ function updateTree() {
   const stepImage = document.createElement("img");
 
   stepImage.src =
-    `Lemon_tree_architecture/steps/s${currentStep}.png`;
+    `steps/s${currentStep}.png`;
 
   stepImage.alt = `Lemon tree step ${currentStep}`;
   stepImage.classList.add("tree-step");
@@ -335,15 +335,18 @@ cardElements.forEach(function (card) {
     const selectedCard = card.dataset.card;
 
     // Dynamite Lemon will get special reset behavior next.
-if (selectedCard === "DynamiteLemon") {
-  currentStep = 1;
-  updateTree();
+    if (selectedCard === "DynamiteLemon") {
+      currentStep = 1;
+      updateTree();
 
-} else {
-  const movement = getRandomMovement(selectedCard);
+      card.textContent = selectedCard;
+    } else {
+      const movement = getRandomMovement(selectedCard);
 
-  moveTree(movement);
-}
+      moveTree(movement);
+
+      card.textContent = selectedCard;
+    }
 
     // Let the result sit briefly.
     window.setTimeout(function () {
