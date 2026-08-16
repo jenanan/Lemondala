@@ -69,7 +69,7 @@
 
 .transform-main {
     width: 100%;
-    padding: 2rem 2rem 4rem;
+    padding: 0.5rem 2rem 3rem;
 }
 
 
@@ -81,7 +81,7 @@
     width: fit-content;
     max-width: 850px;
 
-    margin: 2rem auto 2.5rem;
+    margin: 1rem auto 1.25rem;
     padding: 1.25rem 3rem;
 
     background: #E97862;
