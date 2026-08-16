@@ -223,7 +223,7 @@ body {
     }
 
     .deck {
-    width: 105px;
+    width: 90px;
     flex-shrink: 0;
     }
 
@@ -236,7 +236,7 @@ body {
     }
 
     .card {
-    width: 84px;
+    width: 90px;
     flex-shrink: 0;
     }
 
