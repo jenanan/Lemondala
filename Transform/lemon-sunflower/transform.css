@@ -257,37 +257,37 @@ body {
     }
 
     .die-scene {
-        width: 182px;
-        height: 182px;
+        width: 160px;
+        height: 160px;
     }
 
     .die-face {
-        width: 182px;
-        height: 182px;
+        width: 160px;
+        height: 160px;
     }
 
     .die-face-1 {
-        transform: rotateY(0deg) translateZ(91px);
+        transform: rotateY(0deg) translateZ(80px);
     }
 
     .die-face-2 {
-        transform: rotateY(90deg) translateZ(91px);
+        transform: rotateY(90deg) translateZ(80px);
     }
 
     .die-face-3 {
-        transform: rotateY(180deg) translateZ(91px);
+        transform: rotateY(180deg) translateZ(80px);
     }
 
     .die-face-4 {
-        transform: rotateY(-90deg) translateZ(91px);
+        transform: rotateY(-90deg) translateZ(80px);
     }
 
     .die-face-5 {
-        transform: rotateX(90deg) translateZ(91px);
+        transform: rotateX(90deg) translateZ(80px);
     }
 
     .die-face-6 {
-        transform: rotateX(-90deg) translateZ(91px);
+        transform: rotateX(-90deg) translateZ(80px);
     }
 
     .sunflower-panel {
