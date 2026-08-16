@@ -44,17 +44,8 @@ body {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
-}
-
-/* Left third - die */
-
-.die-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 0;
 }
 
 /* Die area */
