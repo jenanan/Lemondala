@@ -57,8 +57,6 @@ function updateSunflower() {
     return;
   }
 
-  sunflowerElement.innerHTML = "";
-
   const stepImage = document.createElement("img");
 
   stepImage.src =
@@ -69,7 +67,9 @@ function updateSunflower() {
 
   stepImage.classList.add("sunflower-step");
 
-  sunflowerElement.appendChild(stepImage);
+  stepImage.addEventListener("load", function () {
+    sunflowerElement.replaceChildren(stepImage);
+  });
 }
 
 
@@ -287,6 +287,18 @@ resetTransform.addEventListener(
   }
 );
 
+function preloadSunflowerSteps() {
+  for (
+    let step = 1;
+    step <= maxStep;
+    step += 1
+  ) {
+    const image = new Image();
+    image.src = `steps/s${step}.png`;
+  }
+}
+
+preloadSunflowerSteps();
 
 // ==========================
 // START TRANSFORM
