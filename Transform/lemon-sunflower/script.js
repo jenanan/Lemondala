@@ -189,53 +189,6 @@ function moveSunflower(amount) {
 }
 
 
-// ==========================
-// END TRANSFORM
-// ==========================
-
-function endTransform() {
-  dieButton.disabled = true;
-
-  sunflowerElement.innerHTML = "";
-
-  const completeVideo =
-    document.createElement("video");
-
-  completeVideo.src =
-    "lemon_sunflower_complete.mp4";
-
-  completeVideo.autoplay = true;
-  completeVideo.muted = true;
-  completeVideo.playsInline = true;
-
-  completeVideo.classList.add(
-    "sunflower-complete-video"
-  );
-
-  // Set up the completion message
-  // before starting playback.
-  completeVideo.addEventListener(
-    "ended",
-    function () {
-      endModal.classList.add("show");
-    }
-  );
-
-  sunflowerElement.appendChild(
-    completeVideo
-  );
-
-  // Explicitly start playback.
-  completeVideo.play().catch(
-    function (error) {
-      console.error(
-        "Completion video could not play:",
-        error
-      );
-    }
-  );
-}
-
 
 // ==========================
 // DIE SELECTION
@@ -262,6 +215,20 @@ dieButton.addEventListener(
   }
 );
 
+
+// ==========================
+// END TRANSFORM
+// ==========================
+
+function endTransform() {
+  dieButton.disabled = true;
+
+  updateSunflower();
+
+  window.setTimeout(function () {
+    endModal.classList.add("show");
+  }, 2500);
+}
 
 // ==========================
 // RESET
