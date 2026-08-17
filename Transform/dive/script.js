@@ -352,6 +352,18 @@ resetDive.addEventListener(
   }
 );
 
+function preloadDiveSteps() {
+  for (
+    let step = 1;
+    step <= maxStep;
+    step += 1
+  ) {
+    const image = new Image();
+    image.src = `steps/s${step}.png`;
+  }
+}
+
+preloadDiveSteps();
 
 // ==========================
 // START TRANSFORM
