@@ -264,4 +264,23 @@ body {
         flex-shrink: 0;
         transform: translateX(35px);
     }
+
+    .next-transform {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+
+    border: 3px solid white;
+    border-radius: 10px;
+    background: #84a92a;
+
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;    
+    }
+
+    .next-transform:hover {
+    opacity: 0.8;
+    }
 }
