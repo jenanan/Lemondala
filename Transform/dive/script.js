@@ -85,8 +85,6 @@ function updateDive() {
     return;
   }
 
-  diveElement.innerHTML = "";
-
   const stepImage =
     document.createElement("img");
 
@@ -98,7 +96,12 @@ function updateDive() {
 
   stepImage.classList.add("dive-step");
 
-  diveElement.appendChild(stepImage);
+  stepImage.addEventListener(
+    "load",
+    function () {
+      diveElement.replaceChildren(stepImage);
+    }
+  );
 }
 
 
