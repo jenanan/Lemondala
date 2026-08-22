@@ -1,296 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Animations of the world of Lemondala.">
+    <meta
+        name="description"
+        content="Animations of the world of Lemondala."
+    >
+
     <title>View | Lemondala</title>
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../View/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/favicon.png"
+    >
 </head>
 
-<!-- Site Header -->
-<header class="site-header">
+<body>
 
-    <div class="brand">
+    <!-- Site Header -->
 
-        <a href="https://lemondala.com" class="logo">
-            LEMONDALA
-        </a>
+    <header class="site-header">
 
-    <nav class="site-nav">
-        <a href="../View/" class="active">VIEW</a>
-        <a href="../Transform/" class="active">TRANSFORM</a>
-        <a href="../Spread/" class="active">SPREAD</a>
-    </nav>
+        <div class="brand">
+
+            <a
+                href="https://lemondala.com"
+                class="logo"
+            >
+                LEMONDALA
+            </a>
+
+            <nav class="site-nav">
+                <a href="../View/" class="active">VIEW</a>
+                <a href="../Transform/">TRANSFORM</a>
+                <a href="../Spread/">SPREAD</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- View -->
+
+    <main class="view-page">
+
+        <section
+            class="cycle"
+            aria-label="Lemondala Cycle 1"
+        >
+
+            <article class="skit">
+
+                <!-- GIF moments -->
+
+                <div
+                    class="skit-gifs"
+                    aria-label="Exhiled animated moments"
+                >
+
+                    <button
+                        class="artwork-trigger"
+                        type="button"
+                        data-gif="GIFs/C1S1_GIF_sunflower.gif"
+                        aria-label="Play sunflower in Hell animation"
+                    >
+                        <img
+                            src="../Assets/images/C1S1_GIF_art_sunflower.png"
+                            alt="Bright green sunflower growing from soil in Hell with flames behind it."
+                        >
+                    </button>
+
+
+                    <button
+                        class="artwork-trigger"
+                        type="button"
+                        data-gif="GIFs/C1S1_GIF_Milk_Cow.gif"
+                        aria-label="Play Milk Cow animation"
+                    >
+                        <img
+                            src="../Assets/images/C1S1_GIF_art_Milk_Cow.png"
+                            alt="Milk Cow on fire before turning into an ice cream cone."
+                        >
+                    </button>
+
+
+                    <button
+                        class="artwork-trigger"
+                        type="button"
+                        data-gif="GIFs/C1S1_GIF_flaming_butterfly.gif"
+                        aria-label="Play flaming butterfly animation"
+                    >
+                        <img
+                            src="../Assets/images/C1S1_GIF_art_flaming_butterfly.png"
+                            alt="A butterfly surrounded by flames in Hell."
+                        >
+                    </button>
+
+                </div>
+
+
+                <!-- Skit feature -->
+
+                <div class="skit-feature">
+
+                    <a
+                        class="skit-image"
+                        href="https://www.facebook.com/share/v/1GRknUUGJr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="skits/art/C1S1_Exhiled_art.png"
+                            alt="Exhiled, Cycle 1 Skit 1 of Lemondala."
+                        >
+                    </a>
+
+
+                    <div class="skit-info">
+
+                        <h2>EXHILED</h2>
+
+                        <p class="skit-number">
+                            Cycle: 1, Skit: 1
+                        </p>
+
+                        <p class="skit-description">
+                            The three horned lemons are exiled after
+                            finding some joy in their own personal Hells.
+                            But not all lemons float.
+                        </p>
+
+                        <a
+                            class="skit-watch"
+                            href="https://www.facebook.com/share/v/1GRknUUGJr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            WATCH on Facebook →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- GIF Modal -->
+
+    <div
+        class="gif-modal"
+        id="gif-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Animated artwork"
+        hidden
+    >
+
+        <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Close animation"
+        >
+            ×
+        </button>
+
+        <img
+            id="modal-gif"
+            draggable="false"
+            src=""
+            alt=""
+        >
 
     </div>
 
-</header>
 
-<body>
-    <main class="view-page">
-        <section class="image-gallery" aria-label="Lemondala visual works">
+    <!-- Footer -->
 
-            <button class="artwork-trigger" type="button" data-gif="GIFs/C1S1_GIF_sunflower.gif" aria-label="Play animation sunflower in Hell GIF">
-            <img src="../Assets/images/C1S1_GIF_art_sunflower.png" alt="Bright green sunflower resting on top soil in Hell with flames behind it."></button>
+    <footer class="site-footer">
 
-            <button class="artwork-trigger" type="button" data-gif="GIFs/C1S1_GIF_Milk_Cow.gif" aria-label="Play animation Milk Cow turning into an ice cream cone GIF">
-            <img src="../Assets/images/C1S1_GIF_art_Milk_Cow.png" alt="Milk Cow on fire turns into an ice cream cone."></button>
+        <a
+            href="https://www.facebook.com/lemondala"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Lemondala on Facebook"
+        >
+            <i class="fa-brands fa-facebook"></i>
+        </a>
 
-            <button class="artwork-trigger" type="button" data-gif="GIFs/C1S1_GIF_flaming_butterfly.gif" aria-label="Play animation of flaming butterfly in Hell GIF">
-            <img src="../Assets/images/C1S1_GIF_art_flaming_butterfly.png" alt="Flaming Butterfly in Hell."></button>
-            
-            <div class="skit-link">
+        <p>© 2026 Lemondala</p>
 
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1GRknUUGJr/"
-                    target="_blank"
-                    rel="noopener noreferrer">
+    </footer>
 
-                    <img src="skits/art/C1S1_Exhiled_art.png"
-                        alt="Exhiled Lemondala skit">
-                </a>
 
-            <div class="skit-teaser">
-                <h2>EXHILED</h2>
-                <h2>Cycle: 1, Skit: 1</h2>
-
-                <p>The three horned lemons are exiled after finding some joy in their own personal Hells. But not all lemons float.</p>
-
-                <a href="https://www.facebook.com/share/v/1GRknUUGJr/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/6.gif" aria-label="Play animation of the Floozy Lemon with the pink bra">
-            <img src="../Assets/images/6.png" alt="Lemon wearing a pink bra against a white background."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/9.gif" aria-label="Play animation of lemon spraying">
-            <img src="../Assets/images/9.png" alt="Two lemons. The right lemon sprays a golden liquid stream at the other."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/10.gif" aria-label="Play animation of the grater explosion">
-            <img src="../Assets/images/10.png" alt="A lemon faces a tilted box grater balanced on a lit red explosive."></button>
-
-            <div class="skit-link">
-
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1BgyvzrQFU/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="skits/art/Salty.png"
-                        alt="Salty Lemondala skit">
-                </a>
-
-            <div class="skit-teaser">
-                <h2>SALTY</h2>
-
-                <p>Purple Horns attempts to mellow out the drama after Pirate Lemon catches Salt flirting with Floozy Lemon.</p>
-
-                <a href="https://www.facebook.com/share/v/1BgyvzrQFU/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/5.gif" aria-label="Play animation of the pink lemon sunflower">
-            <img src="../Assets/images/5.png" alt="A sunflower with a lemon center and pink petals."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/12.gif" aria-label="Play animation of the lemon with hat and dog legs">
-            <img src="../Assets/images/12.png" alt="A lemon with a hat and dog legs."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/13.gif" aria-label="Play animation of the lemon eating small lemons from pill bottle">
-            <img src="../Assets/images/13.png" alt="A lemon stands next to a pill bottle full of mini lemons."></button>
-
-            <div class="skit-link">
-
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1BTbgANaRo/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="skits/art/Gutsy.png"
-                        alt="Gutsy Lemondala skit">
-                </a>
-
-            <div class="skit-teaser">
-                <h2>GUTSY</h2>
-
-                <p>Green Horns tries to protect Tomato, but Lemon gets the ultimate revenge.</p>
-
-                <a href="https://www.facebook.com/share/v/1BTbgANaRo/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/15.gif" aria-label="Play animation of the lemon spraying the eyeball">
-            <img src="../Assets/images/15.png" alt="A lemon on the right and an eyeball on the left. The lemon sprays juice on the eyeball."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/16.gif" aria-label="Play animation of the lemon sucking the cactus gone">
-            <img src="../Assets/images/16.png" alt="A lemon on the right and an cactus with a yellow flower on the left. A blue straw sticks out from the cactus."></button>
-            
-            <button class="artwork-trigger" type="button" data-gif="GIFs/17.gif" aria-label="Play animation of the lemon spraying on the candle">
-            <img src="../Assets/images/17.png" alt="A lemon on a blue cupcake with a candle and a lemon on a red cupcake spraying juice onto the candle."></button>
-
-            <div class="skit-link">
-
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1EpFUMsawL/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="skits/art/Coney.png"
-                        alt="Coney Lemondala skit">
-                </a>
-
-            <div class="skit-teaser">
-                <h2>CONEY</h2>
-
-                <p>Purple Horns gifts a cone hat to Lemon, but feels the backlash of the nice gesture later.</p>
-
-                <a href="https://www.facebook.com/share/v/1EpFUMsawL/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/18.gif" aria-label="Play animation of the lemon and salt shaker in the boat">
-            <img src="../Assets/images/18.png" alt="A lemon with a black eyepatch. A salt shaker with chain around it attached to boat wheel. They are on a boat on water."></button>
-            
-            <button class="artwork-trigger" type="button" data-gif="GIFs/19.gif" aria-label="Play animation of the lemon throwing flame at ice cube">
-            <img src="../Assets/images/19.png" alt="A lemon throws a flame at an ice cube."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/20.gif" aria-label="Play animation of the lemon and fire extinguisher and blue cupcake">
-            <img src="../Assets/images/20.png" alt="A lemon extinguishes a candle."></button>
-
-            <div class="skit-link">
-
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1C8frBrmDP/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="skits/art/butterfly_poop.png"
-                        alt="Butterfly Poop Lemondala skit">
-                </a>
-
-            <div class="skit-teaser">
-                <h2>BUTTERFLY POOP</h2>
-
-                <p>Aqua Horns gets the dirty end of the deal after Wizard Lemon and Sword Lemon decide to battle.</p>
-
-                <a href="https://www.facebook.com/share/v/1C8frBrmDP/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            
-            <button class="artwork-trigger" type="button" data-gif="GIFs/25.Lemon_Sunflower_multicolored_petals.gif" aria-label="Play animation of the multicolored petals lemon sunflower">
-            <img src="../Assets/images/25-multicolored-petals.png" alt="Lemon sunflower with multicolored petals."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/21.gif" aria-label="Play animation of the lemon catching the canvas on fire">
-            <img src="../Assets/images/21.png" alt="The blue cupcake lemon uses the candle to set a canvas on fire."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/23.gif" aria-label="Play animation of the red cupcake lemon throwing fire at aqua antlers">
-            <img src="../Assets/images/23.png" alt="The red cupcake lemon uses a flame to thwart the hungry aqua horned lemon."></button>
-
-            <div class="skit-link">
-
-                <a class="skit-image"
-                    href="https://www.facebook.com/share/v/1En3bRFyih/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="skits/art/Buddy.png"
-                        alt="Buddy Lemondala skit">
-                </a>
-
-            <div class="skit-teaser">
-                <h2>BUDDY</h2>
-
-                <p>Purple Horns unintentionally unleashes terror on Lemondala when trying to free Butterfly.</p>
-
-                <a href="https://www.facebook.com/share/v/1En3bRFyih/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    WATCH on Facebook →
-                    </a>
-            </div>
-
-            </div>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/27.Viking_Helmet_Lemon_Dance_1.gif" aria-label="Play animation of the viking helmet lemon dancing">
-            <img src="../Assets/images/27.png" alt="Viking helmet lemon does a colorful dance."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/28.gif" aria-label="Play animation of the purple horns lemon and the butterfly">
-            <img src="../Assets/images/28.png" alt="Purple horns lemon and butterfly and rain clouds and umbrella."></button>
-
-            <button class="artwork-trigger" type="button" data-gif="GIFs/24.gif" aria-label="Play animation of the wizard and the wand">
-            <img src="../Assets/images/24.png" alt="Lemon with a wizard hat and wand and a lemon with a sword."></button>
-
-            
-
-        </section>
-    </main>
-
-<div
-    class="gif-modal"
-    id="gif-modal"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Animated artwork"
-    hidden
->
-    <button
-        class="modal-close"
-        id="modal-close"
-        type="button"
-        aria-label="Close animation"
-    >
-        ×
-    </button>
-
-    <img id="modal-gif" draggable="false" src="" alt="">
-</div>
-
-<script src="view.js"></script>
-
-<footer class="site-footer">
-
-    <a href="https://www.facebook.com/lemondala"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Visit Lemondala on Facebook">
-
-        <i class="fa-brands fa-facebook"></i>
-
-    </a>
-
-    <p>© 2026 Lemondala</p>
-
-</footer>
+    <script src="view.js"></script>
 
 </body>
+
 </html>
