@@ -62,42 +62,57 @@
     font-weight: 700;
 }
 
-.image-gallery {
+/* ==========================
+   Cycle / Skit layout
+========================== */
+
+.cycle {
+    width: 100%;
+}
+
+.skit {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+
+/* ==========================
+   GIF moments
+========================== */
+
+.skit-gifs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;   /* <-- Add this */
-    gap: clamp(1rem, 3vw, 2rem);
+    justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    margin-bottom: 4rem;
 }
 
-/* Regular gallery images that are not inside buttons */
-.image-gallery > img {
-    flex: 1 1 320px;
-    width: 100%;
-    max-width: 40%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* Clickable artwork container */
 .artwork-trigger {
-    flex: 1 1 320px;
-    width: 100%;
-    max-width: 40%;
+    flex: 0 0 300px;
+
+    width: 300px;
+    height: 300px;
+
     padding: 0;
     border: 0;
+
     background: transparent;
     cursor: pointer;
+
+    overflow: hidden;
 }
 
-/* Image inside the clickable button */
 .artwork-trigger img {
-    width: 100%;
-    max-width: none;
-    height: auto;
     display: block;
-    object-fit: contain;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 .artwork-trigger:focus-visible {
@@ -105,123 +120,139 @@
     outline-offset: 5px;
 }
 
-.gif-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
 
+/* ==========================
+   Featured skit
+========================== */
+
+.skit-feature {
     display: grid;
-    place-items: center;
+    grid-template-columns: minmax(0, 525px) minmax(0, 1fr);
 
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.82);
-}
-
-.gif-modal[hidden] {
-    display: none;
-}
-
-.gif-modal img {
-    max-width: min(90vw, 1100px);
-    max-height: 85vh;
-    object-fit: contain;
-}
-
-.modal-close {
-    position: fixed;
-    top: 1rem;
-    right: 1.25rem;
-
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 3rem;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.skit-link {
-    width: min(1000px, 90%);
-    margin: 3rem auto;
-
-    display: grid;
-    grid-template-columns: 375px 1fr;
-    gap: 3rem;
+    gap: 3.5rem;
     align-items: center;
+
+    width: 100%;
 }
 
 .skit-image {
     display: block;
+    width: 100%;
 }
 
 .skit-image img {
     display: block;
+
     width: 100%;
-    max-width: 375px;
     height: auto;
 }
 
-.skit-teaser {
+.skit-info {
     min-width: 0;
 }
 
-.skit-teaser h2 {
-    margin: 0 0 1rem;
+.skit-info h2 {
+    margin: 0 0 0.75rem;
+
+    font-size: 2rem;
 }
 
-.skit-teaser p {
-    margin: 0 0 1.5rem;
-    line-height: 1.5;
+.skit-number {
+    margin: 0 0 1.25rem;
+
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
-.skit-teaser a {
+.skit-description {
+    max-width: 700px;
+
+    margin: 0 0 2rem;
+
+    line-height: 1.6;
+}
+
+.skit-watch {
     color: inherit;
+
     font-weight: 700;
     text-decoration: none;
 }
 
-.skit-teaser a:hover {
+.skit-watch:hover {
     opacity: 0.7;
 }
 
-@media (max-width: 800px) {
-    .skit-link {
-        grid-template-columns: 1fr;
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 1000px) {
+
+    .skit-gifs {
         gap: 1.5rem;
+    }
+
+    .artwork-trigger {
+        flex-basis: 250px;
+
+        width: 250px;
+        height: 250px;
+    }
+
+    .skit-feature {
+        grid-template-columns: minmax(0, 450px) minmax(0, 1fr);
+
+        gap: 2rem;
     }
 }
 
-/* Footer */
 
-.site-footer {
-    margin-top: 5rem;
-    padding: 2.5rem 1rem;
+@media (max-width: 800px) {
 
-    background-color: #84A92A;   /* darker than your page */
-    border-top: 2px solid rgba(255,255,255,.35);
+    .view-page {
+        padding: 2rem 1rem;
+    }
 
-    text-align: center;
+    .skit-gifs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 0.75rem;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .artwork-trigger {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .skit-feature {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+    }
+
+    .skit-image {
+        max-width: 600px;
+    }
 }
 
-.site-footer a {
-    color: white;
-    font-size: 2rem;
-    text-decoration: none;
 
-    transition:
-        transform .2s ease,
-        opacity .2s ease;
-}
+@media (max-width: 500px) {
 
-.site-footer a:hover {
-    opacity: .75;
-    transform: scale(1.1);
-}
+    .skit-gifs {
+        gap: 0.5rem;
+    }
 
-.site-footer p {
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    font-size: .9rem;
-    letter-spacing: .05em;
+    .skit-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .skit-number {
+        font-size: 1.1rem;
+    }
 }
