@@ -114,6 +114,7 @@
 .skit {
     width: 100%;
     margin-bottom: 2.5rem;
+    padding-bottom: 3rem;
 }
 
 .skit + .skit {
