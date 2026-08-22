@@ -94,8 +94,8 @@
 .artwork-trigger {
     flex: 0 0 300px;
 
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
 
     padding: 0;
     border: 0;
@@ -127,7 +127,7 @@
 
 .skit-feature {
     display: grid;
-    grid-template-columns: minmax(0, 525px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 650px) minmax(0, 1fr);
 
     gap: 3.5rem;
     align-items: center;
@@ -195,10 +195,10 @@
     }
 
     .artwork-trigger {
-        flex-basis: 250px;
+        flex-basis: 150px;
 
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
     }
 
     .skit-feature {
