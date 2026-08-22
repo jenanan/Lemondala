@@ -189,34 +189,48 @@
 
 .skit-info {
     min-width: 0;
+    align-self: center;
 }
 
 .skit-info h2 {
     margin: 0 0 0.75rem;
 
-    font-size: 2rem;
+    font-size: clamp(2.6rem, 4vw, 4.25rem);
+    line-height: 1;
+
+    color: white;
 }
 
 .skit-number {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1.5rem;
 
-    font-size: 1.25rem;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
     font-weight: 700;
+
+    color: #2F2F2F;
 }
 
 .skit-description {
-    max-width: 700px;
+    max-width: 720px;
+    margin: 0 0 2.25rem;
 
-    margin: 0 0 2rem;
+    font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+    line-height: 1.55;
 
-    line-height: 1.6;
+    color: #2F2F2F;
 }
 
 .skit-watch {
-    color: inherit;
+    display: inline-block;
 
-    font-weight: 700;
+    font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+    font-weight: 800;
+
+    color: white;
     text-decoration: none;
+
+    border-bottom: 3px solid white;
+    padding-bottom: 0.2rem;
 }
 
 .skit-watch:hover {
