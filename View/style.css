@@ -233,14 +233,14 @@
 .skit-watch {
     display: inline-block;
 
-    font-size: clamp(1.3rem, 1.7vw, 1.6rem);
-    font-weight: 800;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 700;
 
-    color: white;
-    text-decoration: none;
+    color: #0066CC;
+    text-decoration: underline;
 
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid rgba(255,255,255,0.8);
+    padding-bottom: 0;
+    border-bottom: 0;
 }
 
 .skit-watch:hover {
