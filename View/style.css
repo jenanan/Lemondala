@@ -134,14 +134,15 @@
     align-items: flex-start;
 
     gap: 1rem;
-    margin-bottom: 2rem;
+    width: 85%;
+    margin: 0 auto 2rem;
 }
 
 .artwork-trigger {
-    flex: 0 0 150px;
+    flex: 0 0 105px;
 
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
     aspect-ratio: 1 / 1;
 
     padding: 0;
@@ -155,8 +156,8 @@
 .artwork-trigger img {
     display: block;
 
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
 
     object-fit: cover;
 }
