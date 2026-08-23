@@ -173,12 +173,14 @@
 
 .skit-feature {
     display: grid;
-    grid-template-columns: minmax(0, 650px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 450px) minmax(0, 1fr);
 
     gap: 3.5rem;
     align-items: center;
 
-    width: 100%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skit-image {
