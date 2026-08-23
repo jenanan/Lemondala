@@ -221,11 +221,11 @@
 }
 
 .skit-description {
-    max-width: 680px;
-    margin: 0 0 2.25rem;
+    max-width: 620px;
+    margin: 0 0 1.75rem;
 
-    font-size: clamp(1.35rem, 1.6vw, 1.55rem);
-    line-height: 1.65;
+    font-size: clamp(1.05rem, 1.2vw, 1.25rem);
+    line-height: 1.4;
 
     color: #3A3A3A;
 }
