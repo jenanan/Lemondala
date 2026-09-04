@@ -104,6 +104,43 @@
 }
 
 /* ==========================
+   Cycle clickable button/bar
+========================== */
+
+details {
+    margin-bottom: 30px;
+}
+
+details summary {
+    display: block;
+    width: fit-content;
+    padding: 12px 22px;
+    border: 2px solid white;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    list-style: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary::before {
+    content: "▶ ";
+}
+
+details[open] summary::before {
+    content: "▼ ";
+}
+
+details summary:hover {
+    background: white;
+    color: #AFD33D;
+}
+
+/* ==========================
    Cycle / Skit layout
 ========================== */
 
